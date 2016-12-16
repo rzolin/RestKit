@@ -179,7 +179,7 @@ static void *RKOperationFinishDate = &RKOperationFinishDate;
         RKLogTrace(@"response.body=%@", RKLogTruncateString(HTTPRequestOperation.responseString));
     }
     objc_setAssociatedObject(objectRequestOperation, RKOperationStartDate, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    objc_setAssociatedObject(objectRequestOperation.HTTPRequestOperation, RKParentObjectRequestOperation, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+ //   objc_setAssociatedObject(objectRequestOperation.HTTPRequestOperation, RKParentObjectRequestOperation, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
