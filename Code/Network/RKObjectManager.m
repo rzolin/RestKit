@@ -841,7 +841,13 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFRKHTTPClientParam
 
 - (NSArray *)requestDescriptors
 {
-    return [NSArray arrayWithArray:self.mutableRequestDescriptors];
+      NSMutableArray *descriptors = [NSMutableArray array];
+      for (id descriptor in self.mutableRequestDescriptors) {
+            if (!descriptor) continue;
+            [descriptors addObject:descriptor];
+      }
+      return [NSArray arrayWithArray:descriptors];
+//      return [NSArray arrayWithArray:self.mutableRequestDescriptors];
 }
 
 - (void)addRequestDescriptor:(RKRequestDescriptor *)requestDescriptor
