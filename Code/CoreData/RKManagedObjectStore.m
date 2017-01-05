@@ -66,6 +66,7 @@ NSSet <NSManagedObjectID *> *RKSetOfManagedObjectIDsFromManagedObjectContextDidS
     unionObjectIDs(objectIDs,notification.userInfo[NSDeletedObjectsKey]);
     
     return objectIDs;
+
 }
 
 @interface RKManagedObjectContextChangeMergingObserver : NSObject
